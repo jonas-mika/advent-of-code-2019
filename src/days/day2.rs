@@ -30,12 +30,12 @@ fn computer(v : &Vec<i64>, noun : i64, verb : i64) -> i64 {
     }
 }
 
-fn main() {
+pub fn solve() {
     let file;
     if env::args().len() > 1 {
         file = format!("{}", env::args().nth(1).unwrap());
     } else {
-        file = format!("./inputs/day{}.in", DAY);
+        file = format!("./src/inputs/day{}.in", DAY);
     }
 
     let file = File::open(file).expect("");
@@ -56,4 +56,8 @@ fn main() {
             }
         }
     }
+}
+
+fn main() {
+    solve();
 }

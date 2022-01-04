@@ -9,12 +9,12 @@ fn manhatten(p : &(i32, i32) ) -> i32 {
     p.0.abs() + p.1.abs()
 }
 
-fn main() {
+pub fn solve() {
     let file;
     if env::args().len() > 1 {
         file = format!("{}", env::args().nth(1).unwrap());
     } else {
-        file = format!("./inputs/day{}.in", DAY);
+        file = format!("./src/inputs/day{}.in", DAY);
     }
 
     let file = File::open(file).expect("");
@@ -77,4 +77,8 @@ fn main() {
 
     println!("Part 1: {}", distances.iter().min().unwrap()); 
     println!("Part 2: {}", total_steps.iter().min().unwrap()); 
+}
+
+fn main() {
+    solve();
 }

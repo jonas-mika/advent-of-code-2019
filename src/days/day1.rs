@@ -13,8 +13,8 @@ fn fuel(mut fuel : f32) -> f32 {
     total
 }
 
-fn main() {
-    let workfile : String = format!("./inputs/day{}.in", DAY);
+pub fn solve() {
+    let workfile : String = format!("./src/inputs/day{}.in", DAY);
 
     let file = File::open(workfile).expect("");
     let reader = BufReader::new(file);
@@ -27,5 +27,9 @@ fn main() {
         ans2 += fuel(val); 
     }
     println!("Part 1: {}", ans1);
-    println!("Part 1: {}", ans2);
+    println!("Part 2: {}", ans2);
+}
+
+fn main() {
+    solve();
 }
