@@ -1,5 +1,4 @@
-use std::env;
-use std::fs::File;
+use std::env; use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::collections::{HashMap};
 
